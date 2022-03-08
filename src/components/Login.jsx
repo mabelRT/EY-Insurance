@@ -1,16 +1,10 @@
 import React from "react";
 import { LoginContext } from "../context/LoginProvider";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
-  const {
-    email,
-    setError,
-    password,
-    userLogin,
-    setPassword,
-    setEmail,
-  } = React.useContext(LoginContext);
+  const { email, setError, password, userLogin, setPassword, error, setEmail } =
+    React.useContext(LoginContext);
 
   const loginCount = (e) => {
     e.preventDefault();
@@ -35,48 +29,44 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={loginCount}>
-      <div className="form-group">
-        <label>Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          placeholder="Enter email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-          {" "}
-        
-        <small id="emailHelp" className="form-text text-muted">
-          We'll never share your email with anyone else.
-        </small>
+    <main className="mt-5">
+      <div className="mt-5">
+        <h3 className="text-center">Iniciar sesión</h3>
+        <hr />
+        <div className="row justify-content-center">
+          <div className="col-12 col-sm-8 col-md-6 col-xl-4">
+            <form onSubmit={loginCount}>
+              {error ? <div className="alert alert-danger">{error}</div> : null}
+              <input
+                type="email"
+                className="form-control mb-2"
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+              <input
+                type="password"
+                className="form-control mb-2"
+                placeholder="Contraseña"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
+              <button className="btn btn-lg btn-dark btn-block" type="submit">
+                Iniciar sesión
+              </button>
+              <Link to={`/reset`}>
+                <p
+                  type="button"
+                  className="text-center mt-3"
+                >
+                  Olvidé mi contraseña
+                </p>
+              </Link>
+            </form>
+          </div>
+        </div>
       </div>
-      <div className="form-group">
-        <label >Password</label>
-        <input
-          type="password"
-          className="form-control"
-          id="exampleInputPassword1"
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-        />
-          {" "}
-      </div>
-      <div className="form-check">
-        <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-          {" "}
-        
-        <label className="form-check-label" for="exampleCheck1">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
+    </main>
   );
 };
 

@@ -5,9 +5,9 @@ import { app } from "../firebase.js";
 import { useNavigate } from "react-router-dom";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
+  //createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  updateProfile,
+  //updateProfile,
   onAuthStateChanged, 
   sendPasswordResetEmail,
   signOut
@@ -25,12 +25,14 @@ const LoginProvider = (props) => {
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState("");
   const [esRegistro, setEsRegistro] = React.useState(false);
+  const [uidData, setUid] = React.useState("");
+
  
 
   //const history = useHistory()
   let navigate = useNavigate();
 
-  // crear cuenta con contraseña
+ /*  // crear cuenta con contraseña
   const userRegister = (email, password, name) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -61,7 +63,7 @@ const LoginProvider = (props) => {
         // ..
         console.log(error.code);
       });
-  };
+  }; */
 
   // login con cuenta ya creada
   const userLogin = (email, password) => {
@@ -78,8 +80,9 @@ const LoginProvider = (props) => {
         setPassword("");
         setName("");
         setError(null);
+        setUid(user.uid)
         //history.push("/role")
-        navigate("/role");
+        navigate("/home");
       })
       .catch((error) => {
         if (error.code === "auth/missing-email") {
@@ -128,13 +131,16 @@ const resetPassword = (email) => {
   sendPasswordResetEmail(auth, email)
   .then(() => {
     console.log('contraseña actualizada')
-    navigate("/login");
+    navigate("/");
   })
   .catch((error) => {
     console.log(error)
     if (error.code === "auth/missing-email") {
       setError("Este correo no está registrado.");
-    }
+    } 
+    if (error.code === "auth/user-not-found") {
+        setError("Este correo no está registrado.");
+      }
     // ..
   });
 }
@@ -142,7 +148,7 @@ const resetPassword = (email) => {
 
 
   const totalProps = {
-    userRegister,
+    //userRegister,
     userLogin,
     auth,
     email,
@@ -157,7 +163,8 @@ const resetPassword = (email) => {
     setEmail,
     signOff,
     firebaseUser,
-    resetPassword
+    resetPassword,
+    uidData
   };
 
   return (
