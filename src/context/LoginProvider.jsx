@@ -8,6 +8,7 @@ import {
   //createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   //updateProfile,
+
   onAuthStateChanged, 
   sendPasswordResetEmail,
   signOut
@@ -32,7 +33,9 @@ const LoginProvider = (props) => {
   //const history = useHistory()
   let navigate = useNavigate();
 
+
  /*  // crear cuenta con contraseña
+
   const userRegister = (email, password, name) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -63,7 +66,9 @@ const LoginProvider = (props) => {
         // ..
         console.log(error.code);
       });
+
   }; */
+
 
   // login con cuenta ya creada
   const userLogin = (email, password) => {
@@ -80,6 +85,7 @@ const LoginProvider = (props) => {
         setPassword("");
         setName("");
         setError(null);
+
         setUid(user.uid)
         //history.push("/role")
         navigate("/home");
@@ -131,16 +137,20 @@ const resetPassword = (email) => {
   sendPasswordResetEmail(auth, email)
   .then(() => {
     console.log('contraseña actualizada')
+
     navigate("/");
+
   })
   .catch((error) => {
     console.log(error)
     if (error.code === "auth/missing-email") {
       setError("Este correo no está registrado.");
+
     } 
     if (error.code === "auth/user-not-found") {
         setError("Este correo no está registrado.");
       }
+
     // ..
   });
 }
@@ -148,7 +158,9 @@ const resetPassword = (email) => {
 
 
   const totalProps = {
+
     //userRegister,
+
     userLogin,
     auth,
     email,
@@ -163,8 +175,10 @@ const resetPassword = (email) => {
     setEmail,
     signOff,
     firebaseUser,
+
     resetPassword,
     uidData
+
   };
 
   return (

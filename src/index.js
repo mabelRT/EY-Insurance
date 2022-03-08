@@ -16,6 +16,7 @@ ReactDOM.render(
       <App/>
       </DataProvider>
     </LoginProvider>
+
     </React.StrictMode>
   </BrowserRouter>,
       document.getElementById('root')
