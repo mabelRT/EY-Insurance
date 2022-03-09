@@ -14,35 +14,25 @@ const UserDataProvider = (props) => {
   const [poliza, setPoliza] = React.useState([]);
   const [siniestro, setSiniestro] = React.useState([]);
 
+
   // filter para obtener solo datos del usuario (uid)
   
   const user = datos.filter((e) => e.uid === uidData)
   //console.log(user)
 
-  React.useEffect(() => {
-   user.map((item) => (
-           setAuto(item.auto)
-    ))
-  }, [user])
+ 
+// map para obtener los datos del objeto 
 
   React.useEffect(() => {
     user.map((item) => (
             setName(item.nombre),
-            setApellidos(item.apellidos)
-     ))
-   }, [user])
-
-  React.useEffect(() => {
-    user.map((item) => (
-            setPoliza(item.poliza)
-     ))
-   }, [user])
-
-   React.useEffect(() => {
-    user.map((item) => (
+            setApellidos(item.apellidos),
+            setAuto(item.auto), 
+            setPoliza(item.poliza),
             setSiniestro(item.siniestro)
      ))
    }, [user])
+
 
  /*  React.useEffect(() => {
     user.map((item) => (
@@ -56,14 +46,6 @@ const UserDataProvider = (props) => {
   console.log(poliza)
   console.log(siniestro)
   
-
-  //console.log(auto1)
- /*  .map((user) => {
-    return { ...user.auto(), id: user.id };
-  })
-  //console.log(orders)
-  setAuto(users);    */    
-
 
   const totalProps = {
     //datos user
