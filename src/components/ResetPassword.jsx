@@ -23,6 +23,7 @@ const ResetPassword = () => {
   return (
     
     <div className="reset-container">
+
       <div className="greyLogo">
       <img className= "grey_logo" src={grey_logo} alt="EY logo in grey color" />
       </div>
@@ -44,7 +45,6 @@ const ResetPassword = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

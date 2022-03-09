@@ -12,8 +12,8 @@ const Login = () => {
   const loginCount = (e) => {
     e.preventDefault();
     if (!email.trim() || !password.trim()) {
-      console.log("Datos vacíos email!");
-      setError("Datos vacíos email!");
+      console.log("Debe ingresar el email");
+      setError("Debe ingresar el email");
       return;
     }
     if (!password.trim()) {

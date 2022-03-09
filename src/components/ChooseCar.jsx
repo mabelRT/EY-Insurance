@@ -12,8 +12,9 @@ const ChooseCar = () => {
 
   return (
     <section className='selectCar'>
-  <HeaderBack/>
-  <div className='containerSelectcar'>
+ <HeaderBack/>
+ <div className='containerSelectcar'>
+
       <h1 className="text-center mt-4 mb-4"> {nombre} escoge tu vehículo </h1>
       
       {/*  style="max-width: 540px" */}
