@@ -86,7 +86,7 @@ const LoginProvider = (props) => {
         setName("");
         setError(null);
 
-        setUid(user.uid)
+        /* setUid(user.uid) */
         //history.push("/role")
         navigate("/home");
       })
@@ -115,6 +115,8 @@ const LoginProvider = (props) => {
         if (user) {
           const uid = user.uid;
           setFirebaseUser(user)
+          setUid(uid)
+
           
           // ...
         } else {

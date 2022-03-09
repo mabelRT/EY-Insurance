@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import LoginProvider from "./context/LoginProvider"
 import DataProvider from './context/DataProvider';
+import UserDataProvider from './context/UserDataProvider';
+
 
 
 ReactDOM.render(
@@ -13,7 +15,9 @@ ReactDOM.render(
     <React.StrictMode> 
     <LoginProvider>
       <DataProvider>
+        <UserDataProvider>
       <App/>
+      </UserDataProvider>
       </DataProvider>
     </LoginProvider>
 
