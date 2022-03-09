@@ -6,7 +6,7 @@ const Events = () => {
 <h1>Mis Eventos</h1>
 </>
 
-     );
+    );
 }
- 
+
 export default Events;
