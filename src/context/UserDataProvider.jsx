@@ -1,13 +1,13 @@
 import React from "react";
-import { dataContext } from "../context/DataProvider";
-import { LoginContext } from "../context/LoginProvider";
+import { dataContext } from "./DataProvider";
+import { LoginContext } from "./LoginProvider";
 export const userContext = React.createContext();
 
 const UserDataProvider = (props) => {
 
   const { datos } = React.useContext(dataContext);
   const { uidData } = React.useContext(LoginContext);
-
+  
   const [nombre, setName] = React.useState("");
   const [apellidos, setApellidos] = React.useState("");
   const [auto, setAuto] = React.useState([]);

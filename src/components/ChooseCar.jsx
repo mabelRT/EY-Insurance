@@ -2,7 +2,7 @@ import React from "react";
 import { userContext } from "../context/UserDataProvider";
 import car from "../images/car.png";
 import "../styles/chooseCar.css"
-import HeaderBack from "./HeaderBack.jsx";
+import HeaderBack from "./HeaderBack";
 
 const ChooseCar = () => {
   const { nombre, auto, poliza } = React.useContext(userContext);
@@ -14,6 +14,7 @@ const ChooseCar = () => {
     <section className='selectCar'>
  <HeaderBack/>
  <div className='containerSelectcar'>
+
       <h1 className="text-center mt-4 mb-4"> {nombre} escoge tu vehículo </h1>
       
       {/*  style="max-width: 540px" */}

@@ -68,7 +68,7 @@ const UpDocuments = () => {
                     <input className="form-control" type="file" id="formFile" placeholder="Añade archivo" onChange={upPhoto}/>
                 </div>
                 <div>
-                   
+            
                 </div>
                     
             </div>

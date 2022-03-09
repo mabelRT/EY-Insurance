@@ -8,6 +8,7 @@ import UpDocuments from './components/UpDocuments';
 import ChooseCar from './components/ChooseCar';
 
 
+
 const App = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const App = () => {
       <Route path="/selectcar" element={<ChooseCar/>}/>
     </Routes>
 </>
+
   );
 }
 export default App;
