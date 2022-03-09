@@ -88,7 +88,7 @@ const LoginProvider = (props) => {
 
         /* setUid(user.uid) */
         //history.push("/role")
-        navigate("/data");
+        navigate("/home");
       })
       .catch((error) => {
         if (error.code === "auth/missing-email") {
@@ -115,7 +115,7 @@ const LoginProvider = (props) => {
         if (user) {
           const uid = user.uid;
           setFirebaseUser(user)
-          setUid(user.uid)
+          setUid(uid)
 
           
           // ...

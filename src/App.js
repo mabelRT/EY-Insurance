@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Policies from './components/Policies';
 import DescribeSinister from './components/DescribeSinister';
 import ChooseCar from './components/ChooseCar';
+import UpDocuments from './components/UpDocuments';
 
 
 const App = () => {
@@ -20,7 +21,10 @@ const App = () => {
           <Route path="/reset" element={<ResetPassword />} />
          {/*  <Route path="/data" element={<ReadData />} /> */}
           <Route path="/describe" element={<DescribeSinister />} />
-          <Route path="/data" element={<ChooseCar />} />
+          {/* <Route path="/data" element={<ChooseCar />} /> */}
+          <Route path="/photo" element={<UpDocuments/>} />
+          <Route path="/selectcar" element={<ChooseCar/>}/>
+          
 
         </Routes>
     </>

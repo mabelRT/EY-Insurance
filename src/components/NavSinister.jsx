@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import home from "../img/icons/home.png";
-import back from "../img/icons/back.png";
+import home from "../images/home.png";
+import back from "../images/back.png";
 
 const NavSinister = () => {
   return (
