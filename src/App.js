@@ -5,6 +5,8 @@ import ResetPassword from './components/ResetPassword';
 import Events from './components/Events';
 import Home from './components/Home';
 import Policies from './components/Policies';
+import DescribeSinister from './components/DescribeSinister';
+import ChooseCar from './components/ChooseCar';
 
 
 const App = () => {
@@ -16,7 +18,10 @@ const App = () => {
           <Route path="/policies" element={<Policies />} />
           <Route path="/" element={<Login />} />
           <Route path="/reset" element={<ResetPassword />} />
-          <Route path="/home" element={<ReadData />} />
+          <Route path="/data" element={<ReadData />} />
+          <Route path="/describe" element={<DescribeSinister />} />
+          <Route path="/choose" element={<ChooseCar />} />
+
         </Routes>
     </>
   );
