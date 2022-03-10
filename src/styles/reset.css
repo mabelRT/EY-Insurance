@@ -1,0 +1,46 @@
+.reset-container{
+    background-color: #F6F6FA;
+    height: 100vh;
+}
+
+.greyLogo {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.grey_logo {
+    display: flex;
+    margin-top: 10vh;
+}
+
+.recover-input {
+    border-radius: 30px;
+    width: 300px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.recover-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+           
+}
+
+.btn-recover {
+    color: #ffe600;
+    background-color: #ffe600;
+    border-radius: 30px;
+    width: 300px;
+    height: 52px;
+    color: #2E2E38;
+    margin-top: 5vh;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+}

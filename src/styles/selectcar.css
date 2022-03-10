@@ -1,0 +1,10 @@
+.selectcar{
+    background-color: #F6F6FA;
+    height: 100vh;
+    
+  }
+  .containerSelectcar{
+    justify-content: center;
+    align-content: center;
+    display: flex;
+  }
