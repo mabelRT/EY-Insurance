@@ -40,7 +40,6 @@ const statusChange = async (variable) => {
 };
 
 
-
   return (
     <div>
       < HeaderBack/>
