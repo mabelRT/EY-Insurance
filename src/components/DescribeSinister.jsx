@@ -1,9 +1,10 @@
 import React from 'react'
-import NavSinister from './NavSinister'
+import HeaderBack from './HeaderBack'
+
 const DescribeSinister = () => {
   return (
     <div>
-      < NavSinister/>
+      < HeaderBack/>
     
       <div className="container mt-3">
   <h2>Describe el suceso</h2>

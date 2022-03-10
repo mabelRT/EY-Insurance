@@ -1,19 +1,26 @@
 import React from "react";
 import { LoginContext } from "../context/LoginProvider";
 import { Link } from "react-router-dom";
-import '../styles/login.css';
-import white_logo from '../images/white_logo.png'
-
+import "../styles/login.css";
+import white_logo from "../images/white_logo.png";
 
 const Login = () => {
-  const { email, setError, password, userLogin, setPassword, error, setEmail } =
-    React.useContext(LoginContext);
+  const {
+    email,
+    setError,
+    password,
+    userLogin,
+    setPassword,
+    error,
+    setEmail,
+    message,
+  } = React.useContext(LoginContext);
 
   const loginCount = (e) => {
     e.preventDefault();
     if (!email.trim() || !password.trim()) {
-      console.log("Datos vacíos email!");
-      setError("Datos vacíos email!");
+      console.log("Debe ingresar el email");
+      setError("Debe ingresar el email");
       return;
     }
     if (!password.trim()) {
@@ -34,12 +41,20 @@ const Login = () => {
   return (
     <section className="login-container">
       <div className="whiteLogo">
-      <img className= "white_logo" src={white_logo} alt="EY logo in white color" />
+        <img
+          className="white_logo"
+          src={white_logo}
+          alt="EY logo in white color"
+        />
       </div>
       <div className="mt-5">
         <div className="row justify-content-center">
           <div className="col-12 col-sm-8 col-md-6 col-xl-4">
             <form onSubmit={loginCount} className="login-box">
+              {message ? (
+                <div className="alert alert-danger">{message}</div>
+              ) : null}
+
               {error ? <div className="alert alert-danger">{error}</div> : null}
               <input
                 type="email"
@@ -56,10 +71,12 @@ const Login = () => {
                 value={password}
               />
               <div className="text-center">
-              <button className="btn btn-lg btn-dark btn-block btn-session" type="submit">
-             
-                Iniciar sesión
-              </button>
+                <button
+                  className="btn btn-lg btn-dark btn-block btn-session"
+                  type="submit"
+                >
+                  Iniciar sesión
+                </button>
               </div>
               <Link to={`/reset`}>
                 <p
@@ -78,4 +95,3 @@ const Login = () => {
 };
 
 export default Login;
-
