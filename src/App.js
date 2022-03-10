@@ -9,7 +9,9 @@ import ChooseCar from './components/ChooseCar';
 import DescribeSinister from './components/DescribeSinister'
 import Sinister from './components/Sinister';
 import SelectDate from './components/SelectDate';
-
+import NewCar from './components/NewCar';
+import PassEvent from './components/PassEvent';
+import SendEvent from './components/SendEvent';
 
 
 const App = () => {
@@ -26,6 +28,9 @@ const App = () => {
       <Route path="/describe" element={<DescribeSinister/>}/>
       <Route path="/sinister" element={<Sinister/>}/>
       <Route path="/selectdate" element={<SelectDate/>}/>
+      <Route path="/newcar" element={<NewCar/>}/>
+      <Route path="/passevent" element={<PassEvent/>}/>
+      <Route path="/sendevent" element={<SendEvent/>}/>
     </Routes>
 </>
 

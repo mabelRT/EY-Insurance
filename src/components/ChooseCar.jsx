@@ -47,23 +47,21 @@ const ChooseCar = () => {
 
                 {
                 [poliza.poliza1].map((item, id) => (
-                   <button
-                   key={id}
-                   onClick={() => {
-                     agregarPoliza(item);
-                   }}>
+                  <button
+                  key={id}
+                  onClick={() => {
+                    agregarPoliza(item);
+                  }}>
 
                   <div >
-                   
                     <p className="card-text">
                       {" "}
                       Poliza: {item.codigo} Vigencia: {item.vigencia}{" "}
                     </p>
                     <p className=" h5 text-info card-text">{item.estado}</p>
-                   
                   </div>
-                   </button>
-                   
+                  </button>
+                
                 ))}
               </div>
             </div>

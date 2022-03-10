@@ -13,7 +13,6 @@ const UserDataProvider = (props) => {
 
   const { datos } = React.useContext(dataContext);
   const { uidData, setError } = React.useContext(LoginContext);
-  
   const [nombre, setName] = React.useState("");
   const [apellidos, setApellidos] = React.useState("");
   const [auto, setAuto] = React.useState([]);
@@ -84,7 +83,7 @@ const UserDataProvider = (props) => {
     e.preventDefault();
     const date = new Date();
    /*  const day = moment(date).format('D-MMM-YY'); */
-   if (insurance.length === 0){
+  if (insurance.length === 0){
      // console.log("El pedido está vacío");
       setError("El pedido está vacío")
       return;
