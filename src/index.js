@@ -1,20 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
-import LoginProvider from "./context/LoginProvider";
-import DataProvider from "./context/DataProvider";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import LoginProvider from "./context/LoginProvider"
+import DataProvider from './context/DataProvider';
+import UserDataProvider from './context/UserDataProvider';
+
+
 
 ReactDOM.render(
   <BrowserRouter>
-    <React.StrictMode>
-      <LoginProvider>
-        <DataProvider>
-          <App />
-        </DataProvider>
-      </LoginProvider>
+    <React.StrictMode> 
+    <LoginProvider>
+      <DataProvider>
+        <UserDataProvider>
+      <App/>
+      </UserDataProvider>
+      </DataProvider>
+    </LoginProvider>
+
     </React.StrictMode>
   </BrowserRouter>,
   document.getElementById("root")

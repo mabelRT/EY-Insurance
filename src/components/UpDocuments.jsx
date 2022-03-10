@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-//import camera from "../img/icons/camera.png";
+// import camera from "../img/icons/camera.png";
 import { app, db} from "../firebase"
 import { 
     getStorage, 
@@ -66,6 +66,9 @@ const UpDocuments = () => {
                 <div className="mb-3">
                     <label htmlFor="formFile" className="form-label">Default file input example</label>
                     <input className="form-control" type="file" id="formFile" placeholder="Añade archivo" onChange={upPhoto}/>
+                </div>
+                <div>
+            
                 </div>
                     
             </div>

@@ -12,8 +12,8 @@ const Login = () => {
   const loginCount = (e) => {
     e.preventDefault();
     if (!email.trim() || !password.trim()) {
-      console.log("Datos vacíos email!");
-      setError("Datos vacíos email!");
+      console.log("Debe ingresar el email");
+      setError("Debe ingresar el email");
       return;
     }
     if (!password.trim()) {
@@ -38,7 +38,6 @@ const Login = () => {
       </div>
       <div className="mt-5">
   
-        <hr />
         <div className="row justify-content-center">
           <div className="col-12 col-sm-8 col-md-6 col-xl-4">
             <form onSubmit={loginCount} className="login-box">
