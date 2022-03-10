@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Policies from './components/Policies';
 import UpDocuments from './components/UpDocuments';
 import ChooseCar from './components/ChooseCar';
+import Sinister from './components/Sinister';
+import SelectDate from './components/SelectDate';
 
 
 
@@ -20,6 +22,8 @@ const App = () => {
       <Route path="/reset" element={<ResetPassword />} />
       <Route path="/photo" element={<UpDocuments />} />
       <Route path="/selectcar" element={<ChooseCar/>}/>
+      <Route path="/sinister" element={<Sinister/>}/>
+      <Route path="/selectdate" element={<SelectDate/>}/>
     </Routes>
 </>
 

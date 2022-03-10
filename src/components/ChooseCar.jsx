@@ -15,7 +15,7 @@ const ChooseCar = () => {
  <HeaderBack/>
  <div className='containerSelectcar'>
 
-      <h1 className="text-center mt-4 mb-4"> {nombre} escoge tu vehículo </h1>
+      <h1 className="text-center mt-4 mb-4"> Hola {nombre}, escoge tu vehículo </h1>
       
       {/*  style="max-width: 540px" */}
       <div className="card mb-3">
@@ -36,7 +36,7 @@ const ChooseCar = () => {
                   <div key={id}>
                   <p className="card-text" > Poliza: {item.codigo} Vigencia: {item.vigencia} </p>
                   <p className="card-text">
-                <small className="text-muted">{item.estado}</small>
+                <small className="text-muted state-payment">{item.estado}</small>
               </p>
               </div>
                 ))
