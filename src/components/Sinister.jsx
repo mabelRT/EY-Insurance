@@ -1,7 +1,8 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "../styles/sinister.css";
 import HeaderBack from "./HeaderBack";
-
+import back from '../images/back.png';
 
 const Sinister = () => {
 
@@ -13,6 +14,11 @@ const Sinister = () => {
   return (
     <section className="sinister-container">
       <HeaderBack />
+      <div className="back-icon">
+     <Link to ={"/selectcar"}>
+     <img className= "back" src={back} alt="Home icon" />
+     </Link>
+     </div>
       <div className="containerHome">
         <div className="orderColumn">
           <div className="sinister-title">    
@@ -37,7 +43,9 @@ const Sinister = () => {
            
           </div>
           <div className="continue-btn">
-          <button type="button" class="btn btn-primary next-btn">Basic</button>
+          <Link to = "/selectdate">
+          <button type="button" class="btn btn-dark next-btn">Siguiente</button>
+          </Link>
           </div>
         </div>
       </div>

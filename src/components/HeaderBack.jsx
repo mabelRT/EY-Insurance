@@ -15,11 +15,11 @@ const HeaderBack = () => {
     </Link>
     </div>
     <div className="back-box">
-    <img className= "back" src={back} alt="Home icon" />
+  
     </div>
 </section>
 
-    );
+     );
 }
-
+ 
 export default HeaderBack;
