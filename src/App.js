@@ -8,8 +8,6 @@ import UpDocuments from './components/UpDocuments';
 import ChooseCar from './components/ChooseCar';
 import DescribeSinister from './components/DescribeSinister'
 
-
-
 const App = () => {
   return (
     <>
