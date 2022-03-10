@@ -5,11 +5,13 @@
 }
 .btn-h {
   background-color: #ffe600;
-  color: black;
+  color: #2E2E38;
   margin-top: 1rem;
   border: none;
   width: 300px;
     height: 52px;
+    font-size: 1rem;
+    font-weight: bold;
 }
 .containerHome {
   display: flex;

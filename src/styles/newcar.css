@@ -7,7 +7,7 @@
 .containerLogo-C {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+ 
 }
 .btn-h{
     width: 300px;
@@ -31,11 +31,17 @@
   color:black;
 
 }
+
+.car-container{
+  
+}
+
 .logoCoche {
-  width: 25vw;
+  width: 50vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
+
 }
 .formCheck{
     margin-top: 10px;
@@ -64,9 +70,23 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1rem;
   margin-bottom: 3rem;
 }
-.checkLabel{
-  margin-top: 2rem;
+
+
+.conditions {
+  font-size: 1rem;
+  margin-top: 3vh;
+
+}
+
+.check-section{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-top: 3vh;
+}
+
+.text-question{
+ 
 }

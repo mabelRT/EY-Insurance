@@ -11,17 +11,16 @@ const SendEvent = () => {
         <div className="btn-confirm">
           <img className="logoCheck col-auto " src={check} alt="logo coche" />
           <p>
-            ¡Tu solicitud ha sido enviada! Puedes comprobar el proceso de tu
-            evento en la sección “Mis eventos”.
+            ¡Tu solicitud ha sido enviada! <br/>  Puedes comprobar el estado de tu proceso en la sección “Mis eventos”.
           </p>
-          <h2>numero de solicitud:{}</h2>
+          <h3>Número de solicitud:{}</h3>
           <div className="btn-send">
             <button type="button" class="btn-h btn btn-dark rounded-pill">
-              compartir
+              Compartir
             </button>
             <Link to="/events">
               <button type="button" class="btn-h btn btn-dark rounded-pill">
-                ir a mis eventos
+                Ir a mis eventos
               </button>
             </Link>
           </div>
