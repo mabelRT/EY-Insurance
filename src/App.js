@@ -6,8 +6,7 @@ import Home from './components/Home';
 import Policies from './components/Policies';
 import UpDocuments from './components/UpDocuments';
 import ChooseCar from './components/ChooseCar';
-
-
+import DescribeSinister from './components/DescribeSinister'
 
 const App = () => {
   return (
@@ -20,6 +19,7 @@ const App = () => {
       <Route path="/reset" element={<ResetPassword />} />
       <Route path="/photo" element={<UpDocuments />} />
       <Route path="/selectcar" element={<ChooseCar/>}/>
+      <Route path="/describe" element={<DescribeSinister/>}/>
     </Routes>
 </>
 

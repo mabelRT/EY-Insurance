@@ -28,7 +28,7 @@ const LoginProvider = (props) => {
   const [esRegistro, setEsRegistro] = React.useState(false);
   const [uidData, setUid] = React.useState("");
 
- 
+
 
   //const history = useHistory()
   let navigate = useNavigate();

@@ -17,10 +17,10 @@ const UserDataProvider = (props) => {
 
   // filter para obtener solo datos del usuario (uid)
   
-  const user = datos.filter((e) => e.uid === uidData)
+  const user = datos.filter((e) => e.id === uidData)
   //console.log(user)
 
- 
+
 // map para obtener los datos del objeto 
 
   React.useEffect(() => {
@@ -30,16 +30,16 @@ const UserDataProvider = (props) => {
             setAuto(item.auto), 
             setPoliza(item.poliza),
             setSiniestro(item.siniestro)
-     ))
-   }, [user])
+    ))
+  }, [user])
 
 
- /*  React.useEffect(() => {
+/*  React.useEffect(() => {
     user.map((item) => (
-         [item.poliza].map((ele) => (
+        [item.poliza].map((ele) => (
             setPoliza(ele.poliza1)
-         ))
-     ))
+        ))
+    ))
    }, [user]) */
 
   console.log(auto)
