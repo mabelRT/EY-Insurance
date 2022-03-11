@@ -4,13 +4,15 @@ import "../styles/newcar.css";
 import coche from "../images/coche.png";
 import HeaderBack from "./HeaderBack";
 import back from '../images/back.png';
+import { userContext } from "../context/UserDataProvider";
 
 const NewCar = () => {
 
-  const saveValue = (e) => {
+  const {agregarFire} =  React.useContext(userContext);
+  /* const saveValue = (e) => {
     console.log(e.target.value); 
    
-}
+} */
 
   return (
     <section className="newCar">
@@ -20,7 +22,7 @@ const NewCar = () => {
          <img className= "back" src={back} alt="Home icon" />
          </Link>
          </div>
-      <div className="col-auto p-5 text-center">
+      <div className="col-auto p-4 text-center">
         <div className="text-question">
        <h1>¿Deseas un automóvil de reemplazo?</h1>
         </div>
@@ -30,10 +32,10 @@ const NewCar = () => {
           <img className="logoCoche" src={coche} alt="logo coche" />
           </div>
           <Link to = "/sendevent">
-          <button type="button" value="sí" onClick={saveValue} class="btn-N btn btn-dark rounded-pill ">
+          <button type="button" value="sí" onClick={agregarFire} class="btn-N btn btn-dark rounded-pill ">
             Sí
           </button>
-          <button type="button"  value="no" onClick={saveValue} class="btn-N btn btn-dark rounded-pill ">
+          <button type="button"  value="no" onClick={agregarFire} class="btn-N btn btn-dark rounded-pill ">
             No
           </button>
           </Link>
