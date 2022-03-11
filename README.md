@@ -1,4 +1,6 @@
-#### EY INSURANCE: APLICACIÓN PARA COBRANZA DE SEGURO AUTOMOTRIZ
+#### Poyecto Ganador del primer lugar en el Talent Fest Chile 2022 de Laboratoria
+
+### EY INSURANCE: APLICACIÓN PARA COBRANZA DE SEGURO AUTOMOTRIZ
 
 ## INTRODUCCIÓN
 
