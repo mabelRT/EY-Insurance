@@ -5,9 +5,12 @@ import {
   addDoc,
   collection,
 } from "firebase/firestore"
+import { useNavigate } from "react-router-dom";
 
 import { db } from "../firebase";
 export const userContext = React.createContext();
+
+
 
 const UserDataProvider = (props) => {
 
@@ -19,11 +22,13 @@ const UserDataProvider = (props) => {
   const [poliza, setPoliza] = React.useState([]);
  const [siniestro, setSiniestro] = React.useState([]);
   
+ let navigate = useNavigate();
 
   // estados de ingreso nuevo siniestro
 
   const [typeSinister, setTypeSinister] = React.useState("");
   const [carSinister, setCarSinister] = React.useState([]);
+
 
   // filter para obtener solo datos del usuario (uid)
   
@@ -52,7 +57,7 @@ const UserDataProvider = (props) => {
     e.preventDefault();
     const date = new Date();
    /*  const day = moment(date).format('D-MMM-YY'); */
-  
+
     try {
         const docRef = await addDoc(collection(db, 'sinister'),{
             date: date,
@@ -60,9 +65,12 @@ const UserDataProvider = (props) => {
             uid: uidData,
             estado: "Solicitud ingresada",
             tipo: typeSinister,
+            
         })
         setError(null)
         console.log('funciona :)')
+        navigate("/sendevent");
+
         return docRef
         
 
@@ -81,7 +89,8 @@ const UserDataProvider = (props) => {
     events,
     agregarFire,
     setTypeSinister,
-    setCarSinister
+    setCarSinister,
+    
 
     
   };

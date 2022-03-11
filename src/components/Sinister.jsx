@@ -2,20 +2,18 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "../styles/sinister.css";
 import HeaderBack from "./HeaderBack";
-import back from '../images/back.png';
 import { userContext } from "../context/UserDataProvider";
 
+import back from '../images/back.png';
 
 const Sinister = () => {
 
-  const {setTypeSinister, agregarFire} =  React.useContext(userContext);
+  const {setTypeSinister} =  React.useContext(userContext);
 
     const saveValue = (e) => {
       const choose = (e.target.value)
       console.log(choose)
       setTypeSinister(choose); 
-      
-       
    }
 
   return (
