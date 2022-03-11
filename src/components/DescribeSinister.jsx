@@ -22,26 +22,6 @@ const DescribeSinister = () => {
 
   const [describe, setDescribe] = React.useState('')
 
-  // Función para crear la colección post
-  const addPost = async (variable) => {
-  try {
-    const docRef = await addDoc(collection(db, 'users'), {
-      describe: variable,
-    });
-    console.log('Document written with ID: ', docRef.id);
-  } catch (e) {
-    console.error('Error adding document: ', e);
-  }
-}; 
-
-const idDoc = 'fM4M8KWzCqQw7ID5hZTTkxVEBeJ3'
-const statusChange = async (variable) => {
-  const postEdit = doc(db, 'users', idDoc);
-  await updateDoc(postEdit, {
-      describe: variable,
-  });
-};
-
 
   return (
     <section className="describe-container">

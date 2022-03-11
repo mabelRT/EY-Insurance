@@ -3,11 +3,18 @@ import {Link} from "react-router-dom";
 import "../styles/sinister.css";
 import HeaderBack from "./HeaderBack";
 import back from '../images/back.png';
+import { userContext } from "../context/UserDataProvider";
+
 
 const Sinister = () => {
 
+  const {setTypeSinister, agregarFire} =  React.useContext(userContext);
+
     const saveValue = (e) => {
-        console.log(e.target.value); 
+      const choose = (e.target.value)
+      console.log(choose)
+      setTypeSinister(choose); 
+      
        
    }
 
