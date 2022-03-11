@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import home from '../images/home.png';
 import '../styles/header.css';
-import back from '../images/back.png'
 
 
 const HeaderBack = () => {
@@ -15,11 +14,11 @@ const HeaderBack = () => {
     </Link>
     </div>
     <div className="back-box">
-  
+
     </div>
 </section>
 
-     );
+    );
 }
- 
+
 export default HeaderBack;

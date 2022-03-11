@@ -64,12 +64,12 @@ const UpDocuments = () => {
     
     return (
         <section className="upload-container">
-         < HeaderBack/>
         <div className="back-icon">
-         <Link to ={"/describe"}>
-         <img className= "back" src={back} alt="Home icon" />
-         </Link>
-         </div>
+        <HeaderBack />
+        <Link to ={"/selectcar"}>
+        <img className= "back" src={back} alt="Home icon" />
+        </Link>
+        </div>
             <div className= "upload-text text-center">
             <h1>Subir Documentos</h1>
             <p>A continuación, adjunta fotografías del incidente y/o los  archivos que sean pertinentes</p>

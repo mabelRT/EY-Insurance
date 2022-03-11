@@ -16,12 +16,12 @@ const NewCar = () => {
 
   return (
     <section className="newCar">
-     <HeaderBack/>
-         <div className="back-icon">
-         <Link to ={"/photo"}>
-         <img className= "back" src={back} alt="Home icon" />
-         </Link>
-         </div>
+     <div className="back-icon">
+     <HeaderBack />
+     <Link to ={"/selectcar"}>
+     <img className= "back" src={back} alt="Home icon" />
+     </Link>
+     </div>
       <div className="col-auto p-4 text-center">
         <div className="text-question">
        <h1>¿Deseas un automóvil de reemplazo?</h1>
