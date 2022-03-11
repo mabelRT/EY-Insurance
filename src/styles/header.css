@@ -1,0 +1,38 @@
+.header-container {
+    display: flex;
+    height: 10vh;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.closure-box, .home-box, .logo-box, .back-box, .homeBack-box{
+    display: flex;
+}
+.close_session {
+  margin-top: 3vh;
+  margin-right: 5vh;
+  
+}
+
+.home, .home-back {
+  margin-top: 3vh;
+  margin-left: 5vh;
+  height: 6vh;
+  width: auto;
+}
+
+.home-back {
+ margin-right: 5vw;
+}
+
+.logo-header {
+    margin-top: 1vh;
+    margin-left: 5vh;
+    height: 10vh
+}
+
+.back {
+    margin-top: 4vh;
+    margin-left: 5vh;
+    height: 5vh;
+    width: auto;  
+}

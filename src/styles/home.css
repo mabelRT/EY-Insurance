@@ -1,0 +1,35 @@
+.sectionHome {
+  background-color: #f6f6fa;
+  height: 100vh;
+  
+}
+.btn-h {
+  background-color: #ffe600;
+  color: #2E2E38;
+  margin-top: 1rem;
+  border: none;
+  width: 300px;
+    height: 52px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.containerHome {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.containerUser {
+  display: flex;
+  justify-content: center;
+  margin-top: 8em;
+  margin-bottom: 5em;
+}
+.homeButton {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.orderColumn{
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,16 @@
+.events{
+    background-color: #F6F6FA;
+    height: 100vh;
+    
+  }
+  .containerEvents{
+    border: dark;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .car-event {
+    background: #ffffff;
+  }
