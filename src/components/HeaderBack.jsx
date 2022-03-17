@@ -4,7 +4,6 @@ import home from '../images/home.png';
 import '../styles/header.css';
 
 
-
 const HeaderBack = () => {
 
     return ( 
@@ -15,11 +14,11 @@ const HeaderBack = () => {
     </Link>
     </div>
     <div className="back-box">
-  
+
     </div>
 </section>
 
-     );
+    );
 }
- 
+
 export default HeaderBack;

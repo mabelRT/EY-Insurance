@@ -18,8 +18,8 @@ const Sinister = () => {
 
   return (
     <section className="sinister-container">
-      <HeaderBack />
       <div className="back-icon">
+     <HeaderBack />
      <Link to ={"/selectcar"}>
      <img className= "back" src={back} alt="Home icon" />
      </Link>

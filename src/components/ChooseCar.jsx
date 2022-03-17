@@ -26,7 +26,7 @@ const ChooseCar = () => {
           Hola {nombre}, escoge tu vehículo{" "}
         </h1>
 
-        {/*  style="max-width: 540px" */}
+        {/*/  style="max-width: 540px" */}
         <div className="card mb-3">
           <div className="row g-0">
             <div className="col-md-4">

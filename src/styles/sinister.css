@@ -53,8 +53,8 @@
 }
 
 .back-icon {
-    position: relative;
-     z-index: 10;
-     bottom: 10vh;
-     
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    bottom: 10vh;
    }
