@@ -23,12 +23,12 @@ const DescribeSinister = () => {
 
   return (
     <section className="describe-container">
-      <HeaderBack />
       <div className="back-icon">
-        <Link to={"/selectdate"}>
-          <img className="back" src={back} alt="Home icon" />
-        </Link>
-      </div>
+      <HeaderBack />
+      <Link to ={"/selectcar"}>
+      <img className= "back" src={back} alt="Home icon" />
+      </Link>
+     </div>
 
       <div className="container mt-3 describe-text text-center">
         <h2>Describe el suceso</h2>

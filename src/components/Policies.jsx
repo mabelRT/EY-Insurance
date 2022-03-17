@@ -1,7 +1,7 @@
 import React from 'react';
 import { userContext } from "../context/UserDataProvider";
 import car from "../images/car.png";
-import HeaderHome from './HeaderHome.jsx'
+import HeaderHome from './HeaderHome';
 import '../styles/policies.css';
 
 const Policies = () => {
